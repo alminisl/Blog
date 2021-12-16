@@ -1,4 +1,4 @@
- backend:
+backend:
   name: github
   repo: alminisl/blogcmstest
   branch: main
