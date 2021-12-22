@@ -5,8 +5,12 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
+import "../components/BlogPostLayout.module.css"
+import { MDXProvider } from "@mdx-js/react"
+
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
+  console.log("Post", post)
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
 
@@ -29,6 +33,7 @@ const BlogPostTemplate = ({ data, location }) => {
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
+
         <hr />
         <footer>
           <Bio />

@@ -1,0 +1,24 @@
+.container {
+  margin: 0 auto;
+  max-width: 42rem;
+  padding: 2.625rem 1.3125rem;
+  color: white;
+  background-color: #131516;
+  min-height: 100vh;
+  margin-bottom: -20px;
+}
+
+.title {
+  /* font-family: Montserrat, sans-serif; */
+  font-size: 1.44rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-rendering: optimizeLegibility;
+}
+
+.title > a {
+  color: var(--primary-color-light);
+  text-decoration: none;
+}

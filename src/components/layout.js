@@ -1,11 +1,15 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
+import siteMetadata from "../siteMetadata"
+import "./BlogLayout.css"
+import "./BlogIndexPage.css"
+
 const Layout = ({ location, title, children }) => {
+  console.log("CHILDREN", children)
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
   let header
-
   if (isRootPath) {
     header = (
       <h1 className="main-heading">
@@ -21,14 +25,14 @@ const Layout = ({ location, title, children }) => {
   }
 
   return (
-    <div className="global-wrapper" data-is-root-path={isRootPath}>
-      <header className="global-header">{header}</header>
+    <div className="container">
+      <header>
+        <h3 className="title">
+          <Link href={isRootPath}>{siteMetadata.title}</Link>
+        </h3>
+      </header>
+
       <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
-      </footer>
     </div>
   )
 }

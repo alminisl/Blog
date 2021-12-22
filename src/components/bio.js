@@ -32,7 +32,7 @@ const Bio = () => {
 
   return (
     <div className="bio">
-      <StaticImage
+      {/* <StaticImage
         className="bio-avatar"
         layout="fixed"
         formats={["auto", "webp", "avif"]}
@@ -50,7 +50,7 @@ const Bio = () => {
             You should follow them on Twitter
           </a>
         </p>
-      )}
+      )} */}
     </div>
   )
 }

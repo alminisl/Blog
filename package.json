@@ -8,6 +8,7 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
+    "@mdx-js/react": "^1.6.22",
     "gatsby": "^4.4.0",
     "gatsby-plugin-feed": "^4.4.0",
     "gatsby-plugin-gatsby-cloud": "^4.4.0",
@@ -31,6 +32,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
+    "react-navi": "^0.14.4",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.75"
   },
