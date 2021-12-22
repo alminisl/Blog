@@ -1,6 +1,3 @@
-import pythonFriend from "./python.jpg"
-import styles from "./document.module.css"
-
 I thought about this for a time now, to just share interesting things I find on the web which caught my eye. This is mostly for me personally to have a backlog of interesting links I can access when I need but maybe someone else will find it interesting too.
 
 So to begin with one of the most interesting topics and links you can find on the internet, at least in my opinion, are the kind where a big company explains some technical things they did to improve something on their product / app.
@@ -22,4 +19,4 @@ embedded code or directly in your design workflow.
 Last link for this week is this obscure website I found and specifically this blogpost about remote tools (Which idea I will totally steal.. I mean get artistic inspiration) - [9 Tools You Need to Optimise Your Remote Workflow](https://cult.honeypot.io/reads/9-tools-you-need-to-optimise-your-remote-workflow)
 
 And the meme of the week goes to the annoying Pythong developer friend we all have..
-![alt text]("./python.jpg")
+![alt text]("/img/python.jpg")
