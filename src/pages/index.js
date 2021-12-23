@@ -10,7 +10,7 @@ import { formatDate } from "../utils/format"
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
-  console.log("POSTS", posts)
+  console.log("Title in blog index: ", siteTitle)
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>

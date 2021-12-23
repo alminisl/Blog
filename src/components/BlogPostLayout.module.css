@@ -1,28 +1,18 @@
-.title {
-  /* font-family: Montserrat, sans-serif; */
-  font-weight: 900;
-  line-height: 1.1;
-  text-rendering: optimizeLegibility;
-}
-.title > a {
-  text-decoration: none;
-}
-
 .header {
-  margin-bottom: 2.4rem;  
+  margin-bottom: 2.4rem;
 }
 .header .title {
-  font-size: 2.0rem;
+  font-size: 2rem;
   margin-top: 1.7rem;
   margin-bottom: 0;
 }
 .header .title > a {
-  color: --primary-color
+  color: --primary-color;
 }
 
 .footer {
   bottom: 0;
-  margin-bottom:2rem;
+  margin-bottom: 2rem;
 }
 .footer .title {
   font-size: 1.44rem;
@@ -48,7 +38,7 @@
 }
 
 .content hr {
-  background: hsla(0,0%,0%,0.2);
+  background: hsla(0, 0%, 0%, 0.2);
   border: none;
   height: 1px;
 }
@@ -63,41 +53,23 @@
   margin-top: 3.5rem;
   text-rendering: optimizeLegibility;
 }
-  
-/**
-* Based on copypasta from Remy Bach and Sarah Drasner
-*/
-.content code,
-.content pre {
-  color: white;
-  font-family: Consolas,Menlo,Monaco,source-code-pro,Courier New,monospace;
-  font-feature-settings: normal;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;
-  line-height: 1.5;
-  tab-size: 4;
-  hyphens: none;
-}
-  
+
 /* Code blocks */
-.content pre {
+/* .content pre {
   overflow: auto;
   padding: 1em;
 }
 
 .content :not(pre) > code,
 .content pre {
-  background: hsla(0,0%,0%,0.9);
+  background: hsla(0, 0%, 0%, 0.9);
 }
-  
+
 .content pre::-moz-selection,
 .content pre::selection {
   background: hsl(207, 4%, 16%);
-}
-  
+} */
+
 /* Text Selection colour */
 .content pre::-moz-selection,
 .content pre ::-moz-selection {
@@ -109,19 +81,6 @@
 .content pre ::selection {
   text-shadow: none;
   background: hsla(0, 0%, 100%, 0.15);
-}
-
-/* Inline code */
-.content :not(pre) > code {
-  border-radius: .3em;
-  background: rgba(112, 112, 112, 0.2);
-  color: white;
-  padding: .15em .2em .05em;
-  white-space: normal;
-  font-style: italic;
-}
-.content a > code {
-  color: var(--primary-color);
 }
 
 .content :global(.highlighted-line) {
@@ -170,7 +129,7 @@
 .content :global(.token.selector),
 .content :global(.token.doctype) {
   color: rgb(199, 146, 234);
-  font-style: 'italic';
+  font-style: "italic";
 }
 
 .content :global(.token.class-name) {

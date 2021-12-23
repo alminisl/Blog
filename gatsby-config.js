@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Almin's corner of the internet`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Almin Islamovic`,
+      summary: `who lives and works in Vienna building useful things.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `Almin's personal and profesionall blog`,
+    siteUrl: `https://almin.dev`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `almincode`,
     },
   },
   plugins: [
@@ -106,7 +106,7 @@ module.exports = {
               }
             `,
             output: "/rss.xml",
-            title: "Gatsby Starter Blog RSS Feed",
+            title: `Almin's corner of the internet`,
           },
         ],
       },
@@ -114,7 +114,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
+        title: `Almin's corner of the internet`,
         short_name: `GatsbyJS`,
         start_url: `/`,
         background_color: `#ffffff`,

@@ -12,6 +12,16 @@
   text-decoration: none;
 }
 
+.title-blogpost {
+  /* font-family: Montserrat, sans-serif; */
+  font-size: 1.44rem;
+  font-weight: 900;
+  line-height: 3.5rem;
+  margin-top: 0;
+  margin-bottom: 2.625rem;
+  text-rendering: optimizeLegibility;
+}
+
 .articlesList,
 .articlesList > li {
   list-style: none;

@@ -6,31 +6,42 @@ import "./BlogLayout.css"
 import "./BlogIndexPage.css"
 
 const Layout = ({ location, title, children }) => {
-  console.log("CHILDREN", children)
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
+  console.log("isRooth path", isRootPath)
   let header
+  let titleOfBlog
   if (isRootPath) {
     header = (
       <h1 className="main-heading">
-        <Link to="/">{title}</Link>
+        <Link to="/">{siteMetadata.title}</Link>
       </h1>
     )
   } else {
     header = (
       <Link className="header-link-home" to="/">
-        {title}
+        {siteMetadata.title}
       </Link>
+    )
+  }
+
+  if (isRootPath) {
+    titleOfBlog = (
+      <h3 className="title">
+        <Link to="/">{siteMetadata.title}</Link>
+      </h3>
+    )
+  } else {
+    titleOfBlog = (
+      <h3 className="title-blogpost ">
+        <Link to="/">{siteMetadata.title}</Link>
+      </h3>
     )
   }
 
   return (
     <div className="container">
-      <header>
-        <h3 className="title">
-          <Link href={isRootPath}>{siteMetadata.title}</Link>
-        </h3>
-      </header>
+      <header>{titleOfBlog}</header>
 
       <main>{children}</main>
     </div>

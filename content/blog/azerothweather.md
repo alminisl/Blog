@@ -1,0 +1,94 @@
+---
+title: Making of Azeroth Weather
+date: 2020-05-26T19:53:07.625Z
+description: Some interesting links
+---
+
+
+# TLDR
+
+I've made a website, please visit and leave feedback [AzerothWeather](https://www.azerothweather.com/).
+
+> Hooks are functions that let you “hook into” React state and lifecycle features from function components. Hooks don’t work inside classes — they let you use React without classes.
+
+by React Documentation
+
+After some time thinking about what Side project could I Possibly make, watching a ton of Youtube videos to get some inspiration, I saw a video from Tom Scott ([Video Link](https://www.youtube.com/watch?v=BxV14h0kFs0)) Where he explains his ideas and the way he thinks when making projects. I recommend just watching it for more context and / or motivation :) 
+
+So I took his idea of Star Wars Weather, since I thought it a super cool thing to do, where I can learn a lot since in my mind it sounded like a nice project to learn something new. In my case that was React hooks. So thats how the Idea for  Azeroth Weather happened.
+
+Azeroth weather is similar to Star Wars weather, but the main difference is I'm using Open Weather Map to get the Weather Data and obviously I use World of Warcraft zones and not Star Wars planets to show the weather. 
+
+# How is it made
+What I learned with this, is that hooks are weird compared to the class implementations. First of all the State object. 
+
+The state object is declared like this 
+```
+const [count, setCount] = useState(0);
+``` 
+Where we have the variable `count` and the function `setCount.` In this case `useState()` is a ***Hook!*** 
+
+You can call this function from an event handler or somewhere else. It’s similar to this.setState in a class, except it doesn’t merge the old and new state together. 
+
+And of course to have more than one state hook you can just write them down like I did in AzerothWeather like this: 
+
+```js
+const [weather, setWeather] = useState([])
+const [message, setMessage] = useState('Shadowlands')
+const [link, setLink] = useState('')
+const [subtext, setSubtext] = useState('')
+```
+
+These are some of the states I'm using for the AzerothWeather website and following the documents this seems to be fine. 
+
+
+## useEffect()
+
+Something else which is new is the `useEffect` Hook which replaces the lifecycle methods in React (`ComponentDidMount(), ComponentWillmount()...`). The useEffect hook, when called tells React to run our "Effect" function after flushing changes to the DOM. Effects are declared inside the component so they have access to its props and state. By default Reacts runs effects after every render. 
+
+To be honest I still have to dig deeper into the useEffect and figure out how this magic works, but like the useState hook we can have multiple useEffect hooks in one component which is pretty neat.
+
+
+In AzerothWeather I have used the useEffect hook like this: 
+```javascript
+  useEffect(() => {
+    var latitude = ''
+    var longitude = ''
+
+    navigator.geolocation.getCurrentPosition((position) => {
+      latitude = position.coords.latitude
+      longitude = position.coords.longitude
+
+      axios.get('ApiURL' + latitude + '/' + longitude + '/metric')
+        .then(res => {
+          setWeather(res.data.list)
+        })
+        .catch(err => {
+          console.log(err)
+        })
+    })
+
+  }, [])
+  ```
+
+As we can see there is nothihng extraordinary in it, just a fetch and request for geolocations. Neat trick I also did not know, how to access the GPS data from browser, the answer is `navigator.geolocation.getCurrentPosition`. 
+
+This hook is executed once the website is loaded and the data is being fetched. Important to note is that we have the `[]` as second parameter in the hook which tells the hook to only execute once. By default the hooks is being executed every second, or to be precises by every render. Unlike componentDidMount, useEffect is not executed when the component finished mounting, but each time the component is rendered.That means if you modify the components state inside useEffect, it will cause a re-render of the component, which again causes the execution of useEffect.
+
+That’s not a great thing if you want to load data only once.
+That’s why useEffect takes an array of dependencies as a second argument.
+
+So we pass an empty array.
+
+That’s it:
+
+```
+useEffect(() => {
+
+}, [])
+```
+
+If we pass an empty array to useEffect, it’s only executed after the first render. 
+
+And thus concludes my little dive into the world of React Hooks! 
+

@@ -1,0 +1,12 @@
+---
+title: Azeroth Weather has become viral
+date: 2021-01-15T19:53:07.625Z
+description: Some interesting links
+---
+
+So, sometime in December a Spanish website posted an [Article](https://www.genbeta.com/web/esta-web-que-te-dice-que-tiempo-hace-lugar-que-estas-compara-zona-world-of-warcraft) on my website [azerothweather.com](https://www.azerothweather.com/) which was unexpected.
+Prior to this I've posted the link on reddit and somehow this journalist found out about it and made a whole article. In sum, he talks about the process of me making it to learn Typescript, and how I plan to update it with more information and zones.
+
+Following the article I've recieved over 5000 visitors in about 2-3 hours which was insane, prior to this [splitstream](https://splitstream.net) had about 1000 users maximum.
+
+Never expected this to happen from an app shows you the weather. 😁

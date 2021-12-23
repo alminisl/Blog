@@ -1,0 +1,38 @@
+---
+title: Filesizes
+date: 2020-06-03T19:53:07.625Z
+description: Some interesting links
+---
+
+<div>
+  <img
+    width="600"
+    height="300"
+    src="https://media.giphy.com/media/xT9IgLga0z8n8OTFpC/giphy.gif"
+    alt="gif"
+  />
+</div>
+
+We live in a very, very comfortable age, especially when it comes to our file sizes and storage capacities. Storage space today is very cheap and easy to acquire, only my NAS has about 8TB storage combinet with my PC and laptop its almost over 15TB.
+
+So no shortage for pictures, videos and fairly large games.
+
+Ah Games... The Biggest and most fufilling timesink.
+
+I will go on a small tangent here and say that I really enjoy playing games. In the last few years mostly multiplayer ones since my friends are ~400km away from me and it helps us stay connected and do some friendly activities.
+
+Anyway, back on the topic. Currently CoD: Warzone is sitting about ~200GB on my Hard drive.
+
+![codfilesize](https://p47.f4.n0.cdn.getcloudapp.com/items/Wnubey08/CODpcSize.jpg?v=e2862c38b8a74451bc4d4110fdd04c6f)
+
+Almost every next release it is getting bigger and bigger..
+
+I myself am lucky enough to not have issues with this file size, however,
+I do have friends with bad internet or just older hardware which makes it impossible for them to keep up with the increasing size. When you think about it, old Pokemon games from the gameboy felt huge, but they did only have about a few MB of size.
+According to [DataCrystal](https://datacrystal.romhacking.net/wiki/Pok%C3%A9mon_Red_and_Blue) the size is ~1MB which is not much compared to todays standards.
+
+![alt](https://p47.f4.n0.cdn.getcloudapp.com/items/nOuezR5E/filesize.png?v=c81773c82765ecb92586bef8741ead1c)
+
+Now, I'm not saying lets make all 2D games with limited gameplay so we can save space, my idea is, we as a whole, software engineers should start thinking about optimizing our code. It is probably not always possible since deadlines and/or "PM wants this to work ASAP!". I'm totally aware of that, BUT my suggestion is, always think like this when writing some piece of software: **Will a potato PC be able to run this without any hiccups? Will this run on a bad internet connection?**
+
+I always try to answer these questions at least with the personal projects I'm doing, but I'm also not perfect at it. I think we as a whole should make limits in our "minds" when coding and not just assume "yeah a PC rig with 12GB of RAM and TBs of storage will have no issue with this". I think developers got really spoiled in these past years with the huge advantage of having "unlimited" resources when working.

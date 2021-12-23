@@ -1,19 +1,27 @@
 :root {
   --primary-color: #286fb4;
   --primary-color-light: #4d7ca8;
-  /* --primary-color: #d23669;
-  --primary-color-light: rgb(255, 167, 196); */
-  font-family: "Menlo Regular";
+  font-family: "Menlo", "Meslo LG", monospace;
   font-feature-settings: "kern", "liga", "clig", "calt";
   font-weight: 400;
+  margin: 0;
+  padding: 0;
   word-wrap: break-word;
-  font-size: medium;
   background-color: #181a1b;
+  font-kerning: normal;
 }
 
 :global * {
   box-sizing: border-box;
 }
+/* 
+:global(pre),
+:global(code) {
+  font-family: Consolas, Menlo, Monaco, source-code-pro, "Courier New",
+    monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+} */
 
 :global html {
   /* Default White theme? */
@@ -61,17 +69,52 @@
   word-wrap: break-word;
 }
 
-:global(pre),
-:global(code) {
-  font-family: Consolas, Menlo, Monaco, source-code-pro, "Courier New",
-    monospace;
-  font-size: 0.85rem;
+/**
+* Based on copypasta from Remy Bach and Sarah Drasner
+*/
+/* code {
+  font-family: Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace;
+  font-feature-settings: normal;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
   line-height: 1.5;
+  tab-size: 4;
+  hyphens: none;
+  background-image: initial;
+  background-color: rgb(31, 34, 35);
+  color: rgb(165, 162, 157);
+  margin: 1rem 0;
+  border-radius: 0.3em;
+  padding: 0.15em 0.2em 0.05em;
+  font-style: italic;
 }
+
+pre {
+  font-family: Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace;
+  font-feature-settings: normal;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  tab-size: 4;
+  hyphens: none;
+  background-image: initial;
+  background-color: rgb(31, 34, 35);
+  color: rgb(179, 172, 162);
+  text-shadow: none;
+  margin: 1rem 0;
+  padding: 1rem;
+} */
+
 :global pre {
   border-radius: 10px;
   overflow: auto;
-  padding: 1em;
+  padding: 1rem;
 }
 
 :global a {
@@ -110,4 +153,25 @@ h2:before {
   content: "#";
   font-weight: bold;
   font-size: 2rem;
+}
+
+a {
+  color: #69aade;
+}
+
+.blogPostHeader {
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #69aade;
+}
+
+.header-link-home {
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-top: 0;
+  margin-bottom: 0;
 }

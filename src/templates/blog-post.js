@@ -12,6 +12,7 @@ const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   console.log("Post", post)
   const siteTitle = data.site.siteMetadata?.title || `Title`
+  console.log("Site Title blog post", siteTitle)
   const { previous, next } = data
 
   return (
@@ -26,8 +27,11 @@ const BlogPostTemplate = ({ data, location }) => {
         itemType="http://schema.org/Article"
       >
         <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+          <div itemProp="headline" className="blogPostHeader">
+            <span>{post.frontmatter.title}</span>
+          </div>
+
+          <small>{post.frontmatter.date}</small>
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}

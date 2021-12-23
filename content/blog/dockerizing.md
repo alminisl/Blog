@@ -1,0 +1,77 @@
+---
+title: Dockerizing React
+date: 2020-09-21T19:53:07.625Z
+description: Some interesting links
+---
+
+An easy way to **dockerize** your React (create-react-app) would be like this:
+
+- Add this as a dockerfile into the root of your project.
+
+```bash
+# pull official base image
+FROM node:13.12.0-alpine
+
+# set working directory
+WORKDIR /app
+
+# add `/app/node_modules/.bin` to $PATH
+ENV PATH /app/node_modules/.bin:$PATH
+
+# install app dependencies
+COPY package.json ./
+COPY package-lock.json ./
+RUN npm install
+RUN npm install react-scripts@3.4.1 -g
+
+# add app
+COPY . ./
+
+# start app
+CMD ["npm", "start"]
+```
+
+- Add a docker ignore file
+
+```bash
+node_modules
+build
+.dockerignore
+Dockerfile
+```
+
+This will speed up the Docker build process as our local dependencies inside the “node_modules” directory will not be sent to the Docker daemon.
+
+- Build the docker image
+  `$ docker build -t dockerized:react .`
+
+Then start the contianer when the build is done:
+
+```bash
+$ docker run \
+    -it \
+    --rm \
+    -v ${PWD}:/app \
+    -v /app/node_modules \
+    -p 3001:3000 \
+    -e CHOKIDAR_USEPOLLING=true \
+    dockerized:react
+```
+
+So whats happening here ?
+
+- The docker run command creates and runs a new container instance from the image we just created.
+- `-it` starts the container in interactive mode. We need to use this, because the of the react-scripts, which exit after they are finished (if the scripts exits so does the process and so does our Docker container). To prvent that we use the `-it` command which lets us stay in the console.
+
+- `--rm` removes the container and volumes after exiting our container
+- `-v ${PWD}:/app` mounts the code into the container at “/app”
+
+> {PWD} may not work on Windows. Stackoverflow question for more [info](https://stackoverflow.com/questions/41485217/mount-current-directory-as-a-volume-in-docker-on-windows-10)
+
+- Since we want to use the container version of the “node_modules” folder, we configured another volume: `-v /app/node_modules`. You should now be able to remove the local “node_modules” flavor
+
+- `-p 3001:3000` exposes port 3000 to other Docker containers on the same network (for inter-container communication) and port 3001 to the host
+
+- `-e CHOKIDAR_USEPOLLING=true` enables a polling mechanism via chokidar so that hot-reloading will work
+
+Visit `http://localhost:3001` and check if everything is working!
