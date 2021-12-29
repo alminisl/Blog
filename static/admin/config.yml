@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: alminisl/blogcmstest
+  repo: alminisl/blogcms
   branch: main
   base_url: https://api.netlify.com
   auth_endpoint: auth
