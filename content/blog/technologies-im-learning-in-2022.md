@@ -7,7 +7,7 @@ I wanted to make a "new years" resolution on the things I would like to learn an
 
 I will however start with a list of things I did in 2021. 
 
-For example in 2021 I worked mostly with: 
+For example, in 2021 I worked mostly with:
 
 - React 
 - Typescript
@@ -34,14 +34,13 @@ Technologies I want to learn in 2022:
 - Kubernetes and Terraform
 - Tailwind
 
-I really want to dive in more Deeply into Devops this year. I did a lot of those things in the past with past jobs but the ecosystem has changed a lot since then. Kubernetes and Terraform are now the go to technologies for Devops. 
-Also a good language I to learn would be Rust, however with Rust I just miss the use case as to when to use it. 
+I really want to dive in more Deeply into Devops this year. I did a lot of those things in the past with past jobs, but the ecosystem has changed a lot since then. Kubernetes and Terraform are now the go-to technologies for Devops. Also, a good language I to learn would be Rust, however with Rust I just miss the use case as to when to use it.
 
-Tailwind is something I started to use on some side projects and I really love it. You just write down your css classes and you build your layouts and designs however you want. Preferre it much more to alternatives like bootstrap. 
+Tailwind is something I started to use on some side projects and I really love it. You just write down your css classes, and you build your layouts and designs however you want. Preferre it much more to alternatives like bootstrap.
 
-One thing I have used a little bit is GraphQL and I would really love to use this a bit more in my work and also privately. 
+One thing I have used a little is GraphQL and I would really love to use this a bit more in my work and also privately.
 
-So this is a small list of things I would love to learn / use this year.. Probably will not get into everything on the list here, but I would love to re visit this at the end of the year and see what of those I can cross out. 
+So this is a small list of things I would love to learn / use this year… Probably will not get into everything on the list here, but I would love to re visit this at the end of the year and see what of those I can cross out.
 
 
 
