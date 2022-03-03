@@ -3,17 +3,19 @@ title: Homelab Details
 date: 2022-03-03T20:13:36.823Z
 description: Update to my homelab
 ---
+<style>
+img {
+    width:100%;
+}
+</style>
+
+ 
 After a short delay, here is the promised blogpost about my Homelab. 
 
 This is a poorly made network graph of what and how stuff is connected: 
-<div>
-  <img
-    width="800"
-    height="300"
-    src="/img/untitled-diagram.drawio.png"
-    alt="network graph"
-  />
-</div>
+ <div>
+    <img src="/img/untitled-diagram.drawio.png" alt="Profile menu" width: "100%" />
+  </div>
 
 The most importat parts are that I have 1x Raspberry pi 4, 1x Synology NAS (which is my primary storage device) and just a normal switch to connect it to all the other devices on the LAN. 
 
