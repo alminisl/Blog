@@ -8,10 +8,10 @@ After a short delay, here is the promised blogpost about my Homelab.
 This is a poorly made network graph of what and how stuff is connected: 
 <div>
   <img
-    width="600"
+    width="800"
     height="300"
     src="/img/untitled-diagram.drawio.png"
-    alt="gif"
+    alt="network graph"
   />
 </div>
 
