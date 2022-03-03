@@ -6,7 +6,14 @@ description: Update to my homelab
 After a short delay, here is the promised blogpost about my Homelab. 
 
 This is a poorly made network graph of what and how stuff is connected: 
-![](/img/untitled-diagram.drawio.png)
+<div>
+  <img
+    width="600"
+    height="300"
+    src="/img/untitled-diagram.drawio.png"
+    alt="gif"
+  />
+</div>
 
 The most importat parts are that I have 1x Raspberry pi 4, 1x Synology NAS (which is my primary storage device) and just a normal switch to connect it to all the other devices on the LAN. 
 
