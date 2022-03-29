@@ -1,5 +1,5 @@
 ---
-title: Developer productivity (part 1)
+title: Productivity as a Software Engineer (part 1)
 date: 2021-01-18T19:53:07.625Z
 description: Some interesting links
 ---
