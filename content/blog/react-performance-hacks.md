@@ -26,12 +26,12 @@ So now we have only one initialization of the empty array.
 
 ### `useMemo` / `useCallback` 
 
-Something else which is useful for performance gains in React are some specific hooks like the `useMemo` hook (Documentation link)[https://reactjs.org/docs/hooks-reference.html#usememo].
+Something else which is useful for performance gains in React are some specific hooks like the `useMemo` hook [Documentation link](https://reactjs.org/docs/hooks-reference.html#usememo).
 
 In layman terms, what this does is not rendering a child component in the case of not changing the child component's internal state. We Just render the parent component. So we can save a lot of rendering time with this method. 
 
 
-`useCallback` hook (Documentation link)[https://reactjs.org/docs/hooks-reference.html#usecallback] similar to the `useMemo` hook, we can use `useCallback` instead of `useEffect` which will only trigger when one of the dependencies change and return us a Memoized / cached callback. 
+`useCallback` hook [Documentation link](https://reactjs.org/docs/hooks-reference.html#usecallback) similar to the `useMemo` hook, we can use `useCallback` instead of `useEffect` which will only trigger when one of the dependencies change and return us a Memoized / cached callback. 
 
 Some small optimizations tips I've been using recently for React. I'm on a quest to learn even more things about the way react optimization works as I find this part of React still lacking a bit from my side. Will update with further findings. 
 
