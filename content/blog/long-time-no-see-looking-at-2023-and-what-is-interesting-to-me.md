@@ -7,7 +7,11 @@ Web development is constantly evolving and new technologies and tools are being 
 
 
 #﻿ Vite
-Vite is a build tool and development server for JavaScript projects. It is built on top of the native ES modules feature in modern browsers and is focused on providing a fast and efficient development experience. Instead of using a bundler like Webpack or Rollup, Vite allows you to run your code directly in the browser using the native ES modules feature. This means that you don't have to wait for the bundler to rebuild your code every time you make a change, which can significantly speed up the development process.
+Vite is a build tool and development server for JavaScript projects. It is built on top of the native ES modules feature in modern browsers and is focused on providing a fast and efficient development experience.
+
+One of its main features is that it uses the native ES modules feature in modern browsers to provide a fast and efficient development experience. Instead of using a bundler like Webpack or Rollup, Vite allows you to run your code directly in the browser using the native ES modules feature. This means that you don't have to wait for the bundler to rebuild your code every time you make a change, which can significantly speed up the development process.
+
+Vite also includes a development server that automatically reloads the page when changes are made to the code. This means that you don't have to manually refresh the page every time you make a change. Additionally, it has a plugin system that allows you to add additional functionality to your project, like transforming your code with Babel or Typescript.speed up the development process.
 
 #﻿ Astro
 Astro is a framework for building web applications using React and GraphQL. It is designed to make it easy to build fast, efficient, and dynamic web applications by providing a set of powerful tools and libraries for working with React and GraphQL. Astro provides a set of higher-order components and hooks that make it easy to work with GraphQL, and also includes a built-in development server that allows you to run your application locally and see your changes in real-time.
